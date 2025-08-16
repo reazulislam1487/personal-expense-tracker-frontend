@@ -160,11 +160,6 @@ export default function Expenses() {
       <div className="relative z-10 max-w-6xl mx-auto p-6">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center mb-4">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform rotate-12 shadow-lg shadow-purple-500/30">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
-          </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-2">
             Expense Tracker
           </h1>
@@ -203,7 +198,7 @@ export default function Expenses() {
           </div>
 
           {/* Chart Card */}
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl">
+          <div className="bg-white/10 backdrop-blur-md border mb-10 md:mb-0 border-white/20 rounded-2xl p-6 shadow-xl">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-white font-semibold">Expense Breakdown</h3>
               <button
