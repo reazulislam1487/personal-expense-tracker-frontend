@@ -30,6 +30,7 @@ export default function Expenses() {
   const [isChartVisible, setIsChartVisible] = useState(false);
 
   const backendURL = `${process.env.NEXT_PUBLIC_API_URL}`;
+  // console.log(backendURL);
 
   // Filter expenses based on category and date range
   const filteredExpenses = expenses.filter((expense) => {
