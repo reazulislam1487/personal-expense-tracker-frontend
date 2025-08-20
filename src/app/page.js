@@ -30,9 +30,7 @@ export default function Expenses() {
   const [isChartVisible, setIsChartVisible] = useState(false);
 
   const backendURL = `${process.env.NEXT_PUBLIC_API_URL}`;
-  // console.log(backendURL);
 
-  // Filter expenses based on category and date range
   const filteredExpenses = expenses.filter((expense) => {
     const categoryMatch =
       !filterCategory || expense.category === filterCategory;
@@ -55,7 +53,6 @@ export default function Expenses() {
       const data = await res.json();
       setExpenses(data);
     } catch (error) {
-      console.error("Error fetching expenses:", error);
     }
   };
 
@@ -106,7 +103,6 @@ export default function Expenses() {
       fetchExpenses();
       resetForm();
     } catch (error) {
-      console.error("Error saving expense:", error);
     }
   };
 
@@ -117,7 +113,6 @@ export default function Expenses() {
         await fetch(`${backendURL}/${id}`, { method: "DELETE" });
         fetchExpenses();
       } catch (error) {
-        console.error("Error deleting expense:", error);
       }
     }
   };
